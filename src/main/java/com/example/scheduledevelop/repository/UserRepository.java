@@ -9,10 +9,10 @@ import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    Optional<User> findByEmail(String email);
+    Optional<User> findById(Long id);
 
-    default User findUserByIdOrElseThrow(String email) {
-        return findByEmail(email).orElseThrow(()->
+    default User findUserByIdOrElseThrow(Long id) {
+        return findById(id).orElseThrow(()->
                 new ResponseStatusException(
                         HttpStatus.NOT_FOUND
                 ));

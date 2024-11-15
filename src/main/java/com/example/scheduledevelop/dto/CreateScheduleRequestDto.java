@@ -6,10 +6,10 @@ import lombok.Getter;
 public class CreateScheduleRequestDto {
 
     private final String title;
-    private final String content;
+    private final String contents;
 
-    public CreateScheduleRequestDto(String title, String content) {
+    public CreateScheduleRequestDto(String title, String contents) {
         this.title = title;
-        this.content = content;
+        this.contents = contents;
     }
 }
